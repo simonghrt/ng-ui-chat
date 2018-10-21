@@ -1,15 +1,11 @@
-# NgChatbotDemo
+# NgChat
 
-It is a simple project used as a demo to illustrate how to create an Angular project.
+Simple Angular chat library
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-beta.32.3.
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
 
 ## Build
 
@@ -27,3 +23,10 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## TODO
+
+* Add tests
+* Add examples
+* Use ng-packagr for publication
+* Use more recent version of Angular

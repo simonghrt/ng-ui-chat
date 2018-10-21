@@ -8,12 +8,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
     colorBackRight: string = '#007bff';
     colorFontRight: string = '#ffffff';
-    colorBackLeft: string = '#eeeeee';
-    colorFontLeft: string = '#343a40';
-    /*messages = [
+    // colorBackLeft: string = '#00DD00';
+    // colorFontLeft: string = '#DD0000';
+    messages = [
         {"text": "Hello", "date":"", "userOwner":true},
         {"text": "Hello again", "date":"", "userOwner": false},
         {"text": "How are you ?How are you ?How are you ?How are you ?How are you ?How are you ?How are you ?How are you ?", "date":"", "userOwner": true}
-    ];*/
-    messages = [];
+    ];
+    //messages = [];
+
+    onInputReceived(input: string) {
+        let newMessage = {"text": input, "date":"", "userOwner":true};
+        this.messages.push(newMessage);
+    }
 }

@@ -1,5 +1,7 @@
 export class Message {
-  speech_answer:string;
+  private text:string;
+  private userOwner: boolean;
+  private date: any;
 
   constructor() {}
 }

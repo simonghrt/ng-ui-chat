@@ -14,6 +14,4 @@ export class MessageComponent {
     @Input('colorFontRight') colorFontRight: string;
     @Input('colorBackLeft') colorBackLeft: string;
     @Input('colorFontLeft') colorFontLeft: string;
-
-    
 }
