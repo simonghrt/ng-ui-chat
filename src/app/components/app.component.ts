@@ -10,15 +10,12 @@ export class AppComponent {
     colorFontRight: string = '#ffffff';
     // colorBackLeft: string = '#00DD00';
     // colorFontLeft: string = '#DD0000';
-    messages = [
-        {"text": "Hello", "date":"", "userOwner":true},
-        {"text": "Hello again", "date":"", "userOwner": false},
-        {"text": "How are you ?How are you ?How are you ?How are you ?How are you ?How are you ?How are you ?How are you ?", "date":"", "userOwner": true}
-    ];
-    //messages = [];
+    messages = [];
 
     onInputReceived(input: string) {
-        let newMessage = {"text": input, "date":"", "userOwner":true};
+        const newMessage = {"text": input, "date":"", "userOwner":true};
         this.messages.push(newMessage);
+        const newAnswer = {"text": "You said : " + input, "date": "", "userOwner": false};
+        this.messages.push(newAnswer); 
     }
 }

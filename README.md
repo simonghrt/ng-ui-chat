@@ -2,31 +2,84 @@
 
 Simple Angular chat library
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-beta.32.3.
+<img src="screenshot.gif" alt="list" width="270"/>
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Getting started
 
-## Build
+Install package from npm
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+``` bash
+npm install ng-ui-chat --save
+```
 
-## Running unit tests
+Include module in your application
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+``` js
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { ChatModule } from 'ng-ui-chat';
 
-## Running end-to-end tests
+@NgModule({
+  imports: [
+    BrowserModule,
+    ChatModule
+  ],
+  declarations: [ AppComponent ],
+  exports: [ AppComponent ]
+})
+export class AppModule {}
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+## Examples
 
-## Further help
+In your html file :
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+``` html
+    <chat [messages]="messages" (inputSent)="onInputReceived($event)"></chat>
+```
+
+In your ts file :
+
+``` js
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+    messages = [];
+
+    onInputReceived(input: string) {
+        const newMessage = {"text": input, "date":"", "userOwner":true};
+        this.messages.push(newMessage);
+        const newAnswer = {"text": "You said : " + input, "date": "", "userOwner": false};
+        this.messages.push(newAnswer); 
+    }
+}
+```
+
+## Options
+
+Several options are available :
+
+``` html
+<chat [messages]="messages" [colorBackRight]="#DD0000" [colorFontRight]="#DDDDDD"
+    [colorBackLeft]="#00DD00" [colorFontLeft]="#DDDDDD" (inputSent)="onInputReceived($event)"></chat>
+```
+
+## Author
+
+[Simon Gheeraert](https://github.com/simonghrt)
 
 ## TODO
 
-* Add tests
-* Add examples
-* Use ng-packagr for publication
-* Use more recent version of Angular
+- [] Add tests
+- [] Add examples
+- [] Add date in messages
+- [] More available options
+- [] Make a general option object that will be passed to the element
+- [] Use ng-packagr for publication
+- [] Use more recent version of Angular
+- [] Improve input design
