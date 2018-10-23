@@ -1,6 +1,2 @@
-<div class="center chat-container">
-    <chat [messages]="messages" [colorBackRight]="colorBackRight" [colorFontRight]="colorFontRight"
-        (inputSent)="onInputReceived($event)"></chat>
-    <!-- <chat [messages]="messages" [colorBackRight]="colorBackRight" [colorFontRight]="colorFontRight"
-    [colorBackLeft]="colorBackLeft" [colorFontLeft]="colorFontLeft"></chat> -->
-</div>
+<chat [messages]="messages" [colorBackRight]="colorBackRight" [colorFontRight]="colorFontRight"
+    (inputSent)="onInputReceived($event)" [width]="width" [height]="height" [border]="border"></chat>

@@ -6,6 +6,8 @@ Simple Angular chat library
 
 ## Getting started
 
+Create an Angular project with Angular CLI
+
 Install package from npm
 
 ``` bash
@@ -62,11 +64,12 @@ export class AppComponent {
 
 ## Options
 
-Several options are available :
+Several options are available (they all have default values) :
 
 ``` html
-<chat [messages]="messages" [colorBackRight]="#DD0000" [colorFontRight]="#DDDDDD"
-    [colorBackLeft]="#00DD00" [colorFontLeft]="#DDDDDD" (inputSent)="onInputReceived($event)"></chat>
+<chat [messages]="messages" [colorBackRight]="'#DD0000'" [colorFontRight]="'#DDDDDD'"
+    [colorBackLeft]="'#00DD00'" [colorFontLeft]="'#DDDDDD'" (inputSent)="onInputReceived($event)"
+    [width]="'250px'" [height]="'500px'" [border]="'1px solid black'"></chat>
 ```
 
 ## Author

@@ -1,8 +1,9 @@
 {
   "name": "ng-ui-chat",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "angular-cli": {},
+  "main": "public-api.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

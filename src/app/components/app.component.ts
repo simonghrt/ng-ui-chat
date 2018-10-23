@@ -10,6 +10,9 @@ export class AppComponent {
     colorFontRight: string = '#ffffff';
     // colorBackLeft: string = '#00DD00';
     // colorFontLeft: string = '#DD0000';
+    width: string = "250px";
+    height: string = "500px";
+    border: string = "1px solid black";
     messages = [];
 
     onInputReceived(input: string) {
